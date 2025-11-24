@@ -2,9 +2,11 @@
 
 A comprehensive, AI-powered trading dashboard designed for clarity, automation, and insight.
 
-## New Features (v2.0)
+## New Features (v2.1)
 
 - **Expanded Dashboard UI**: A modern, full-screen interface with sidebar navigation.
+- **Mobile Responsive**: Fully optimized layout that adapts to mobile devices and tablets.
+- **Market Cap Analysis**: New column in scanner and portfolio to analyze Volume/MCap ratios.
 - **Personality Profiles**: Switch between "Burry" (Short/Top Hunting) and "Penguin" (Long/Dip Buying) strategies with one click.
 - **Daily Magic Pick**: A special "Sweet Algorithm" button that finds the single best trade of the day with AI verification.
 - **Holdings Management**: A dedicated tab to track your portfolio. Add your symbols and get instant AI advice (Buy/Sell/Hold) for your specific positions.
@@ -17,8 +19,8 @@ A comprehensive, AI-powered trading dashboard designed for clarity, automation, 
 ### 1. Installation
 Clone the repository and enter the directory:
 ```bash
-git clone <your-repo-url>
-cd penguin-stock-watcher
+git clone https://github.com/lalomorales22/trading-scanner
+cd trading-scanner
 ```
 
 ### 2. Configuration
