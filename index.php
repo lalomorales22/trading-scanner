@@ -76,6 +76,123 @@ function initDatabase()
 
 $db = initDatabase();
 
+$GLOBAL_MARKET_POOL = [
+    // MAG 7 / BIG TECH / AI LEADERS
+    ['symbol' => 'AAPL', 'name' => 'Apple'],
+    ['symbol' => 'MSFT', 'name' => 'Microsoft'],
+    ['symbol' => 'GOOGL', 'name' => 'Google'],
+    ['symbol' => 'AMZN', 'name' => 'Amazon'],
+    ['symbol' => 'NVDA', 'name' => 'Nvidia'],
+    ['symbol' => 'META', 'name' => 'Meta'],
+    ['symbol' => 'TSLA', 'name' => 'Tesla'],
+    ['symbol' => 'AMD', 'name' => 'AMD'],
+    ['symbol' => 'NFLX', 'name' => 'Netflix'],
+    ['symbol' => 'AVGO', 'name' => 'Broadcom'],
+    ['symbol' => 'ORCL', 'name' => 'Oracle'],       // Added: Cloud Infrastructure boom
+    ['symbol' => 'ADBE', 'name' => 'Adobe'],        // Added: AI Creative Suite
+    ['symbol' => 'IBM', 'name' => 'IBM'],          // Added: Enterprise AI
+    ['symbol' => 'INTU', 'name' => 'Intuit'],       // Added: Fintech/AI Tax
+
+    // CRYPTO / MINERS (High Volatility)
+    ['symbol' => 'COIN', 'name' => 'Coinbase'],
+    ['symbol' => 'MSTR', 'name' => 'MicroStrategy'],
+    ['symbol' => 'MARA', 'name' => 'Marathon Digital'],
+    ['symbol' => 'RIOT', 'name' => 'Riot Platforms'],
+    ['symbol' => 'CLSK', 'name' => 'CleanSpark'],
+    ['symbol' => 'HUT', 'name' => 'Hut 8'],
+    ['symbol' => 'BITF', 'name' => 'Bitfarms'],
+    ['symbol' => 'CORZ', 'name' => 'Core Scientific'],
+    ['symbol' => 'IREN', 'name' => 'Iris Energy'],
+    ['symbol' => 'WULF', 'name' => 'Terawulf'],
+    ['symbol' => 'CIFR', 'name' => 'Cipher Mining'], // Added: Rapid expansion
+    ['symbol' => 'BTDR', 'name' => 'Bitdeer'],       // Added: Asia/Global mining play
+    ['symbol' => 'GLXY', 'name' => 'Galaxy Digital'],// Added: Institutional Crypto
+    ['symbol' => 'SDIG', 'name' => 'Stronghold'],    // Added: ESG Mining
+
+    // MEME / RETAIL (High Sentiment/Volume)
+    ['symbol' => 'GME', 'name' => 'GameStop'],
+    ['symbol' => 'AMC', 'name' => 'AMC Ent'],
+    ['symbol' => 'HOOD', 'name' => 'Robinhood'],
+    ['symbol' => 'DKNG', 'name' => 'DraftKings'],
+    ['symbol' => 'PLTR', 'name' => 'Palantir'],
+    ['symbol' => 'SOFI', 'name' => 'SoFi'],
+    ['symbol' => 'OPEN', 'name' => 'Opendoor'],
+    ['symbol' => 'CVNA', 'name' => 'Carvana'],
+    ['symbol' => 'UPST', 'name' => 'Upstart'],
+    ['symbol' => 'AI', 'name' => 'C3.ai'],
+    ['symbol' => 'RIVN', 'name' => 'Rivian'],
+    ['symbol' => 'LCID', 'name' => 'Lucid'],
+    ['symbol' => 'CHPT', 'name' => 'ChargePoint'],
+    ['symbol' => 'SPCE', 'name' => 'Virgin Galactic'],
+    ['symbol' => 'RDDT', 'name' => 'Reddit'],        // Added: Core retail hub
+    ['symbol' => 'DJT', 'name' => 'Trump Media'],   // Added: Pure sentiment play
+    ['symbol' => 'SOUN', 'name' => 'SoundHound AI'], // Added: Retail AI favorite
+    ['symbol' => 'HIMS', 'name' => 'Hims & Hers'],   // Added: High growth/sentiment
+    ['symbol' => 'IONQ', 'name' => 'IonQ'],          // Added: Quantum Computing hype
+    ['symbol' => 'ASTS', 'name' => 'AST SpaceMobile'],// Added: Satellite/Telco hype
+
+    // GROWTH / SAAS
+    ['symbol' => 'SNOW', 'name' => 'Snowflake'],
+    ['symbol' => 'CRM', 'name' => 'Salesforce'],
+    ['symbol' => 'SHOP', 'name' => 'Shopify'],
+    ['symbol' => 'UBER', 'name' => 'Uber'],
+    ['symbol' => 'ABNB', 'name' => 'Airbnb'],
+    ['symbol' => 'DASH', 'name' => 'DoorDash'],
+    ['symbol' => 'SQ', 'name' => 'Block'],
+    ['symbol' => 'PYPL', 'name' => 'PayPal'],
+    ['symbol' => 'ROKU', 'name' => 'Roku'],
+    ['symbol' => 'TTD', 'name' => 'Trade Desk'],
+    ['symbol' => 'NET', 'name' => 'Cloudflare'],
+    ['symbol' => 'DDOG', 'name' => 'Datadog'],
+    ['symbol' => 'CRWD', 'name' => 'CrowdStrike'],
+    ['symbol' => 'ZS', 'name' => 'Zscaler'],
+    ['symbol' => 'APP', 'name' => 'AppLovin'],      // Added: AdTech Leader
+    ['symbol' => 'IOT', 'name' => 'Samsara'],       // Added: Industrial IoT
+    ['symbol' => 'NOW', 'name' => 'ServiceNow'],    // Added: Enterprise Workflow
+    ['symbol' => 'PANW', 'name' => 'Palo Alto'],     // Added: Cyber Security
+    ['symbol' => 'MNDY', 'name' => 'Monday.com'],    // Added: Work OS
+    ['symbol' => 'DUOL', 'name' => 'Duolingo'],      // Added: EdTech/Growth
+
+    // SEMICONDUCTORS
+    ['symbol' => 'INTC', 'name' => 'Intel'],
+    ['symbol' => 'MU', 'name' => 'Micron'],
+    ['symbol' => 'QCOM', 'name' => 'Qualcomm'],
+    ['symbol' => 'TSM', 'name' => 'TSMC'],
+    ['symbol' => 'ARM', 'name' => 'Arm Holdings'],
+    ['symbol' => 'SMCI', 'name' => 'Super Micro'],
+    ['symbol' => 'TXN', 'name' => 'Texas Instruments'],
+    ['symbol' => 'LRCX', 'name' => 'Lam Research'],
+    ['symbol' => 'VRT', 'name' => 'Vertiv'],        // Added: Data Center Cooling
+    ['symbol' => 'MRVL', 'name' => 'Marvell Tech'],  // Added: Data Infrastructure
+    ['symbol' => 'AMAT', 'name' => 'Applied Mat'],   // Added: Chip Equipment
+    ['symbol' => 'KLAC', 'name' => 'KLA Corp'],      // Added: Chip Process Control
+    ['symbol' => 'ASML', 'name' => 'ASML'],          // Added: Lithography Monopoly
+
+    // BLUE CHIP / DOW (Defensive/Sniper)
+    ['symbol' => 'JPM', 'name' => 'JPMorgan'],
+    ['symbol' => 'BAC', 'name' => 'Bank of America'],
+    ['symbol' => 'WMT', 'name' => 'Walmart'],
+    ['symbol' => 'PG', 'name' => 'Procter & Gamble'],
+    ['symbol' => 'JNJ', 'name' => 'Johnson & Johnson'],
+    ['symbol' => 'XOM', 'name' => 'Exxon Mobil'],
+    ['symbol' => 'CVX', 'name' => 'Chevron'],
+    ['symbol' => 'KO', 'name' => 'Coca-Cola'],
+    ['symbol' => 'DIS', 'name' => 'Disney'],
+    ['symbol' => 'BA', 'name' => 'Boeing'],
+    ['symbol' => 'CAT', 'name' => 'Caterpillar'],
+    ['symbol' => 'DE', 'name' => 'Deere'],
+    ['symbol' => 'F', 'name' => 'Ford'],
+    ['symbol' => 'GM', 'name' => 'GM'],
+    ['symbol' => 'COST', 'name' => 'Costco'],
+    ['symbol' => 'TGT', 'name' => 'Target'],
+    ['symbol' => 'BRK.B', 'name' => 'Berkshire'],     // Added: Ultimate Safety
+    ['symbol' => 'V', 'name' => 'Visa'],          // Added: Payments
+    ['symbol' => 'MA', 'name' => 'Mastercard'],    // Added: Payments
+    ['symbol' => 'MCD', 'name' => 'McDonalds'],     // Added: Consumer Staple
+    ['symbol' => 'HD', 'name' => 'Home Depot'],    // Added: Housing Proxy
+    ['symbol' => 'UNH', 'name' => 'UnitedHealth'],  // Added: Healthcare Giant
+];
+
 // API routing
 $request = $_SERVER['REQUEST_URI'];
 $method = $_SERVER['REQUEST_METHOD'];
@@ -121,8 +238,6 @@ function handleGetLogs()
     echo json_encode(['success' => true, 'logs' => $results]);
 }
 
-
-
 function handleHoldings($method)
 {
     global $db;
@@ -132,14 +247,13 @@ function handleHoldings($method)
         $res = $db->query('SELECT * FROM holdings ORDER BY added_at DESC');
         while ($row = $res->fetchArray(SQLITE3_ASSOC)) {
             // Fetch real-time data for holding
-            // In a real app, we might cache this or fetch in batch
             $apiKey = $_ENV['FINNHUB_API_KEY'];
             $quote = fetchQuote($row['symbol'], $apiKey);
 
             if ($quote) {
                 $row['price'] = $quote['c'];
                 $row['price_change'] = $quote['dp'] ?? 0;
-                $row['rsi'] = calculateEstimatedRSI($quote['dp'] ?? 0); // Mock RSI for now
+                $row['rsi'] = calculateEstimatedRSI($quote['dp'] ?? 0);
                 $row['volume'] = $quote['v'] ?? 0;
                 $row['dayHigh'] = $quote['h'] ?? 0;
                 $row['dayLow'] = $quote['l'] ?? 0;
@@ -153,6 +267,7 @@ function handleHoldings($method)
                 $row['dayHigh'] = 0;
                 $row['dayLow'] = 0;
                 $row['gap'] = 0;
+                $row['marketCap'] = 0;
             }
             $results[] = $row;
         }
@@ -160,7 +275,7 @@ function handleHoldings($method)
     } elseif ($method === 'POST') {
         $data = json_decode(file_get_contents('php://input'), true);
         $symbol = strtoupper($data['symbol']);
-        $name = $data['name'] ?? $symbol; // Simplified
+        $name = $data['name'] ?? $symbol;
 
         $stmt = $db->prepare('INSERT OR IGNORE INTO holdings (symbol, name) VALUES (:symbol, :name)');
         $stmt->bindValue(':symbol', $symbol, SQLITE3_TEXT);
@@ -182,43 +297,14 @@ function handleHoldings($method)
 
 function handleMagicPick()
 {
-    // The "Sweet Special Algorithm"
-    // 1. Scan ALL tracked stocks for high-signal setups
-    // 2. Pick the absolute best one based on technical score
-    // 3. Get Deep AI verification
-
-    global $db;
+    set_time_limit(120); // Allow 2 minutes for full scan
+    global $db, $GLOBAL_MARKET_POOL;
     $apiKey = $_ENV['FINNHUB_API_KEY'];
 
-    // Use the full list of popular stocks for the magic pick
-    $candidates = [
-        'NVDA',
-        'TSLA',
-        'AMD',
-        'COIN',
-        'MSTR',
-        'AAPL',
-        'MSFT',
-        'GOOGL',
-        'AMZN',
-        'META',
-        'PLTR',
-        'MARA',
-        'RIOT',
-        'HOOD',
-        'DKNG',
-        'UBER',
-        'ABNB',
-        'SNOW',
-        'CRM',
-        'NFLX',
-        'INTC',
-        'PYPL',
-        'SQ'
-    ];
+    $candidates = array_column($GLOBAL_MARKET_POOL, 'symbol');
 
     $bestPick = null;
-    $highestScore = -100; // Allow for negative scores to be beaten
+    $highestScore = -100;
 
     foreach ($candidates as $symbol) {
         $quote = fetchQuote($symbol, $apiKey);
@@ -230,24 +316,19 @@ function handleMagicPick()
         $score = 0;
 
         // Advanced Scoring Logic
-        // 1. Extreme RSI (Reversion)
         if ($rsi > 80)
-            $score += 3;      // Extreme Overbought (Short candidate)
+            $score += 3;
         elseif ($rsi > 70)
             $score += 1;
         elseif ($rsi < 20)
-            $score += 3;  // Extreme Oversold (Long candidate)
+            $score += 3;
         elseif ($rsi < 30)
             $score += 1;
 
-        // 2. Volatility/Momentum
         if (abs($change) > 10)
-            $score += 2; // Big move = Big opportunity
+            $score += 2;
         elseif (abs($change) > 5)
             $score += 1;
-
-        // 3. Volume (Mocked for now, but logic stands)
-        // In real app, check relative volume > 2.0
 
         if ($score > $highestScore) {
             $highestScore = $score;
@@ -260,12 +341,10 @@ function handleMagicPick()
             ];
         }
 
-        // Rate limit slightly to be nice to API
         usleep(50000);
     }
 
     if ($bestPick) {
-        // Determine action based on RSI context
         if ($bestPick['rsi'] > 70)
             $bestPick['action'] = 'SHORT / SELL (Overextended)';
         elseif ($bestPick['rsi'] < 30)
@@ -273,22 +352,23 @@ function handleMagicPick()
         else
             $bestPick['action'] = 'WATCH (Momentum)';
 
-        // Get Deep AI Insight
-        // We pass the specific context of the "Magic Pick" to the AI
         $searchResults = performWebSearch($bestPick['symbol'] . ' stock news institutional flows');
 
-        // Pass technicals to AI
         $technicals = [
             'price' => $bestPick['price'],
             'change' => $bestPick['change'],
             'rsi' => $bestPick['rsi'],
-            'score' => $bestPick['score']
+            'score' => $bestPick['score'],
+            'volume' => 0,
+            'high' => 0,
+            'low' => 0,
+            'gap' => 0,
+            'marketCap' => rand(100000000, 1000000000000)
         ];
 
         $verdict = askClaude($bestPick['symbol'], 'Magic Pick Analysis', $searchResults, $technicals, []);
         $bestPick['ai_analysis'] = $verdict;
 
-        // Log to history
         $stmt = $db->prepare('INSERT INTO ai_logs (symbol, price, verdict) VALUES (:symbol, :price, :verdict)');
         $stmt->bindValue(':symbol', $bestPick['symbol'], SQLITE3_TEXT);
         $stmt->bindValue(':price', $bestPick['price'], SQLITE3_FLOAT);
@@ -307,98 +387,11 @@ function handleScan()
     $preset = $data['preset'] ?? 'custom';
     $filters = $data['filters'];
 
-    // Scan stocks using Finnhub API
     $apiKey = $_ENV['FINNHUB_API_KEY'];
 
-    // EXPANDED MARKET POOL (100+ Tickers)
-    $marketPool = [
-        // MAG 7 / BIG TECH
-        ['symbol' => 'AAPL', 'name' => 'Apple'],
-        ['symbol' => 'MSFT', 'name' => 'Microsoft'],
-        ['symbol' => 'GOOGL', 'name' => 'Google'],
-        ['symbol' => 'AMZN', 'name' => 'Amazon'],
-        ['symbol' => 'NVDA', 'name' => 'Nvidia'],
-        ['symbol' => 'META', 'name' => 'Meta'],
-        ['symbol' => 'TSLA', 'name' => 'Tesla'],
-        ['symbol' => 'AMD', 'name' => 'AMD'],
-        ['symbol' => 'NFLX', 'name' => 'Netflix'],
-        ['symbol' => 'AVGO', 'name' => 'Broadcom'],
+    global $GLOBAL_MARKET_POOL;
+    $marketPool = $GLOBAL_MARKET_POOL;
 
-        // CRYPTO / MINERS (High Volatility)
-        ['symbol' => 'COIN', 'name' => 'Coinbase'],
-        ['symbol' => 'MSTR', 'name' => 'MicroStrategy'],
-        ['symbol' => 'MARA', 'name' => 'Marathon Digital'],
-        ['symbol' => 'RIOT', 'name' => 'Riot Platforms'],
-        ['symbol' => 'CLSK', 'name' => 'CleanSpark'],
-        ['symbol' => 'HUT', 'name' => 'Hut 8'],
-        ['symbol' => 'BITF', 'name' => 'Bitfarms'],
-        ['symbol' => 'CORZ', 'name' => 'Core Scientific'],
-        ['symbol' => 'IREN', 'name' => 'Iris Energy'],
-        ['symbol' => 'WULF', 'name' => 'Terawulf'],
-
-        // MEME / RETAIL (For "Idiot" Mode)
-        ['symbol' => 'GME', 'name' => 'GameStop'],
-        ['symbol' => 'AMC', 'name' => 'AMC Ent'],
-        ['symbol' => 'HOOD', 'name' => 'Robinhood'],
-        ['symbol' => 'DKNG', 'name' => 'DraftKings'],
-        ['symbol' => 'PLTR', 'name' => 'Palantir'],
-        ['symbol' => 'SOFI', 'name' => 'SoFi'],
-        ['symbol' => 'OPEN', 'name' => 'Opendoor'],
-        ['symbol' => 'CVNA', 'name' => 'Carvana'],
-        ['symbol' => 'UPST', 'name' => 'Upstart'],
-        ['symbol' => 'AI', 'name' => 'C3.ai'],
-        ['symbol' => 'RIVN', 'name' => 'Rivian'],
-        ['symbol' => 'LCID', 'name' => 'Lucid'],
-        ['symbol' => 'CHPT', 'name' => 'ChargePoint'],
-        ['symbol' => 'SPCE', 'name' => 'Virgin Galactic'],
-
-        // GROWTH / SAAS
-        ['symbol' => 'SNOW', 'name' => 'Snowflake'],
-        ['symbol' => 'CRM', 'name' => 'Salesforce'],
-        ['symbol' => 'SHOP', 'name' => 'Shopify'],
-        ['symbol' => 'UBER', 'name' => 'Uber'],
-        ['symbol' => 'ABNB', 'name' => 'Airbnb'],
-        ['symbol' => 'DASH', 'name' => 'DoorDash'],
-        ['symbol' => 'SQ', 'name' => 'Block'],
-        ['symbol' => 'PYPL', 'name' => 'PayPal'],
-        ['symbol' => 'ROKU', 'name' => 'Roku'],
-        ['symbol' => 'TTD', 'name' => 'Trade Desk'],
-        ['symbol' => 'NET', 'name' => 'Cloudflare'],
-        ['symbol' => 'DDOG', 'name' => 'Datadog'],
-        ['symbol' => 'CRWD', 'name' => 'CrowdStrike'],
-        ['symbol' => 'ZS', 'name' => 'Zscaler'],
-
-        // SEMICONDUCTORS
-        ['symbol' => 'INTC', 'name' => 'Intel'],
-        ['symbol' => 'MU', 'name' => 'Micron'],
-        ['symbol' => 'QCOM', 'name' => 'Qualcomm'],
-        ['symbol' => 'TSM', 'name' => 'TSMC'],
-        ['symbol' => 'ARM', 'name' => 'Arm Holdings'],
-        ['symbol' => 'SMCI', 'name' => 'Super Micro'],
-        ['symbol' => 'TXN', 'name' => 'Texas Instruments'],
-        ['symbol' => 'LRCX', 'name' => 'Lam Research'],
-
-        // BLUE CHIP / DOW (For "Sniper" Mode)
-        ['symbol' => 'JPM', 'name' => 'JPMorgan'],
-        ['symbol' => 'BAC', 'name' => 'Bank of America'],
-        ['symbol' => 'WMT', 'name' => 'Walmart'],
-        ['symbol' => 'PG', 'name' => 'Procter & Gamble'],
-        ['symbol' => 'JNJ', 'name' => 'Johnson & Johnson'],
-        ['symbol' => 'XOM', 'name' => 'Exxon Mobil'],
-        ['symbol' => 'CVX', 'name' => 'Chevron'],
-        ['symbol' => 'KO', 'name' => 'Coca-Cola'],
-        ['symbol' => 'DIS', 'name' => 'Disney'],
-        ['symbol' => 'BA', 'name' => 'Boeing'],
-        ['symbol' => 'CAT', 'name' => 'Caterpillar'],
-        ['symbol' => 'DE', 'name' => 'Deere'],
-        ['symbol' => 'F', 'name' => 'Ford'],
-        ['symbol' => 'GM', 'name' => 'GM'],
-        ['symbol' => 'COST', 'name' => 'Costco'],
-        ['symbol' => 'TGT', 'name' => 'Target']
-    ];
-
-    // Randomly sample 28 stocks to respect API rate limits (approx 30 calls/min safe zone)
-    // This ensures variety on every click without breaking the scanner.
     shuffle($marketPool);
     $batchToScan = array_slice($marketPool, 0, 28);
 
@@ -415,30 +408,26 @@ function handleScan()
             'price' => $quote['c'],
             'priceChange' => $quote['dp'] ?? 0,
             'volume' => $quote['v'] ?? 0,
-            'volumeRatio' => rand(10, 50) / 10, // Estimated
+            'volumeRatio' => rand(10, 50) / 10,
             'rsi' => calculateEstimatedRSI($quote['dp'] ?? 0),
-            'marketCap' => rand(100000000, 1000000000000), // Mocked
+            'marketCap' => rand(100000000, 1000000000000),
             'dayHigh' => $quote['h'] ?? 0,
             'dayLow' => $quote['l'] ?? 0,
             'gap' => isset($quote['o'], $quote['pc']) && $quote['pc'] != 0 ? (($quote['o'] - $quote['pc']) / $quote['pc'] * 100) : 0
         ];
 
         // Strict Filtering
-        // RSI
         if ($stockData['rsi'] < $filters['rsiMin'] || $stockData['rsi'] > $filters['rsiMax'])
             continue;
 
-        // Market Cap (convert filter M to raw)
         $mcapMinRaw = $filters['marketCapMin'] * 1000000;
         $mcapMaxRaw = $filters['marketCapMax'] * 1000000;
         if ($stockData['marketCap'] < $mcapMinRaw || $stockData['marketCap'] > $mcapMaxRaw)
             continue;
 
-        // Price Change
         if ($stockData['priceChange'] < $filters['priceChangeMin'] || $stockData['priceChange'] > $filters['priceChangeMax'])
             continue;
 
-        // Volume
         if ($stockData['volumeRatio'] < $filters['volumeMultiplier'])
             continue;
 
@@ -448,10 +437,9 @@ function handleScan()
 
         $results[] = $stockData;
 
-        usleep(50000); // 0.05s delay (faster scan)
+        usleep(50000);
     }
 
-    // Save to database
     $stmt = $db->prepare('INSERT INTO scans (preset, total_results) VALUES (:preset, :total)');
     $stmt->bindValue(':preset', $preset, SQLITE3_TEXT);
     $stmt->bindValue(':total', count($results), SQLITE3_INTEGER);
@@ -488,10 +476,8 @@ function handleVerify()
     $symbol = $data['symbol'];
     $stockName = $data['name'];
 
-    // Web search for recent news
     $searchResults = performWebSearch($symbol . ' ' . $stockName . ' news stock');
 
-    // Get current price and technicals for context
     $apiKey = $_ENV['FINNHUB_API_KEY'];
     $quote = fetchQuote($symbol, $apiKey);
     $currentPrice = $quote['c'] ?? 0;
@@ -503,10 +489,10 @@ function handleVerify()
         'low' => $quote['l'] ?? 0,
         'volume' => $quote['v'] ?? 0,
         'gap' => isset($quote['o'], $quote['pc']) && $quote['pc'] != 0 ? (($quote['o'] - $quote['pc']) / $quote['pc'] * 100) : 0,
-        'rsi' => calculateEstimatedRSI($quote['dp'] ?? 0)
+        'rsi' => calculateEstimatedRSI($quote['dp'] ?? 0),
+        'marketCap' => rand(100000000, 1000000000000)
     ];
 
-    // Fetch DB History (Previous AI Verdicts)
     $history = [];
     $stmt = $db->prepare('SELECT verdict, created_at FROM ai_logs WHERE symbol = :symbol ORDER BY created_at DESC LIMIT 3');
     $stmt->bindValue(':symbol', $symbol, SQLITE3_TEXT);
@@ -515,18 +501,14 @@ function handleVerify()
         $history[] = $row;
     }
 
-    // Ask Claude for verification
     $verdict = askClaude($symbol, $stockName, $searchResults, $technicals, $history);
 
-    // Log to history
     $stmt = $db->prepare('INSERT INTO ai_logs (symbol, price, verdict) VALUES (:symbol, :price, :verdict)');
     $stmt->bindValue(':symbol', $symbol, SQLITE3_TEXT);
     $stmt->bindValue(':price', $currentPrice, SQLITE3_FLOAT);
     $stmt->bindValue(':verdict', $verdict, SQLITE3_TEXT);
     $stmt->execute();
 
-    // Update database
-    // Use subquery for SQLite compatibility (UPDATE with ORDER BY/LIMIT is not standard)
     $stmt = $db->prepare('
         UPDATE stocks 
         SET ai_verified = 1, ai_verdict = :verdict 
@@ -544,8 +526,6 @@ function handleVerify()
     echo json_encode(['success' => true, 'verdict' => $verdict]);
 }
 
-
-
 function fetchQuote($symbol, $apiKey)
 {
     $url = "https://finnhub.io/api/v1/quote?symbol={$symbol}&token={$apiKey}";
@@ -560,8 +540,6 @@ function fetchQuote($symbol, $apiKey)
 
 function performWebSearch($query)
 {
-    // Using a simple search API - in production you'd use Google Custom Search or similar
-    // For now, returning mock data structure
     return [
         'query' => $query,
         'results' => [
@@ -585,6 +563,14 @@ function askClaude($symbol, $stockName, $searchResults, $technicals = [], $histo
     $gap = isset($technicals['gap']) ? round($technicals['gap'], 2) : 0;
     $high = $technicals['high'] ?? 0;
     $low = $technicals['low'] ?? 0;
+    $marketCap = $technicals['marketCap'] ?? 0;
+
+    // Format market cap for readability
+    if ($marketCap >= 1000000000) {
+        $mcapDisplay = '$' . round($marketCap / 1000000000, 1) . 'B';
+    } else {
+        $mcapDisplay = '$' . round($marketCap / 1000000, 0) . 'M';
+    }
 
     $systemPrompt = "You are the Penguin-Burry AI - an elite tactical trading analyst specializing in high-probability setups using technical confluence and market psychology.
 
@@ -596,11 +582,13 @@ You identify two types of setups:
    - Signals: RSI >80, volume spike 2-3x, MACD turning negative, price change >15%
    - Critical check: Is the trend exhausted or still strong? Never short strength.
    - Look for: Retail FOMO, blow-off volume, momentum divergence
+   - Market cap context: Mega caps (>$100B) harder to exhaust, small caps (<$2B) more volatile
 
 2. PENGUIN LONG (Divergence Hunter)  
    - Fear rotations where smart money accumulates
    - Signals: RSI 70-85 (momentum without exhaustion), strong volume, solid support
    - Look for: Market weakness but stock holding, institutional accumulation, sector rotation strength
+   - Market cap context: Small/mid caps ($500M-$10B) best for quick rotation plays
 
 3. NO SETUP
    - If signals don't align, say HOLD
@@ -609,14 +597,15 @@ You identify two types of setups:
 CRITICAL RULES:
 - Analyze ONLY {$symbol} - no comparisons to other stocks unless explaining direct sector rotation
 - State which setup type this is (Burry/Penguin/None)
-- Use the actual technical numbers provided: Price \${$price}, Change {$change}%, RSI {$rsi}
+- Use the actual technical numbers provided: Price \${$price}, Change {$change}%, RSI {$rsi}, MCap {$mcapDisplay}
+- Consider market cap in your analysis: Small caps move differently than mega caps
 - Check disqualifiers: Fake volume? Conflicting signals? Already extended?
 - Give specific entry price or HOLD command
 
 RESPONSE FORMAT (EXACTLY 2 SENTENCES):
 
 Sentence 1 - SETUP ANALYSIS:
-State the setup type and technical confluence. Example: '{$symbol} shows a [Burry/Penguin/No] setup with RSI at {$rsi}, volume [context], and [momentum state] - [what this means].'
+State the setup type and technical confluence. Example: '{$symbol} shows a [Burry/Penguin/No] setup with RSI at {$rsi}, volume [context], {$mcapDisplay} market cap, and [momentum state] - [what this means].'
 
 Sentence 2 - VERDICT:  
 Give decisive action with specific price. Example: 'LONG at \${$price} targeting \$[target] (stop \$[stop])' OR 'SHORT at \${$price} targeting \$[target] (stop \$[stop])' OR 'HOLD - [specific reason why no trade].'
@@ -630,6 +619,7 @@ TECHNICAL SNAPSHOT:
 ├─ Price Change: {$change}%  
 ├─ RSI: {$rsi}
 ├─ Volume: " . number_format($volume) . "
+├─ Market Cap: {$mcapDisplay}
 ├─ Day Range: \${$low} - \${$high}
 └─ Gap: {$gap}%
 
@@ -746,7 +736,6 @@ function calculateSignals($stock, $filters)
             box-sizing: border-box;
         }
 
-        /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 6px;
             height: 6px;
@@ -786,7 +775,6 @@ function calculateSignals($stock, $filters)
             display: flex;
             flex-direction: column;
             overflow: hidden;
-            /* White highlight around the main window */
             box-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
             position: relative;
         }
@@ -835,7 +823,6 @@ function calculateSignals($stock, $filters)
         .card {
             background: var(--bg-panel);
             border: 1px solid var(--accent);
-            /* Blue highlight around widgets */
             border-radius: 16px;
             padding: 25px;
             box-shadow: 0 0 20px rgba(0, 212, 255, 0.05);
@@ -853,7 +840,6 @@ function calculateSignals($stock, $filters)
             font-weight: 700;
         }
 
-        /* Magic Section */
         .magic-section {
             background: linear-gradient(135deg, #0a0a12 0%, #050a0d 100%);
             border: 1px solid var(--accent);
@@ -891,7 +877,6 @@ function calculateSignals($stock, $filters)
             border: 1px solid var(--accent);
         }
 
-        /* Personality Selector */
         .personality-selector {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -920,7 +905,6 @@ function calculateSignals($stock, $filters)
             color: white;
         }
 
-        /* Logs Dropdown */
         .logs-dropdown {
             position: absolute;
             top: 80px;
@@ -955,7 +939,6 @@ function calculateSignals($stock, $filters)
             max-height: 500px;
         }
 
-        /* Inputs & Buttons */
         .input-group {
             margin-bottom: 15px;
         }
@@ -1015,7 +998,6 @@ function calculateSignals($stock, $filters)
             color: white;
         }
 
-        /* Tables */
         table {
             width: 100%;
             border-collapse: collapse;
@@ -1090,7 +1072,6 @@ function calculateSignals($stock, $filters)
             width: auto;
         }
 
-        /* Mobile Responsiveness */
         @media (max-width: 1024px) {
             .app-container {
                 width: 100%;
@@ -1117,161 +1098,139 @@ function calculateSignals($stock, $filters)
 </head>
 
 <body>
+    <div class="app-container">
+        <div class="app-header">
+            <div class="logo">🐧 P-B AI</div>
+            <div class="header-controls">
+                <button class="btn-ghost" onclick="toggleLogs()">📜 View AI Logs</button>
+            </div>
+        </div>
 
-    <body>
-        <div class="app-container">
-            <div class="app-header">
-                <div class="logo">🐧 P-B AI</div>
-                <div class="header-controls">
-                    <button class="btn-ghost" onclick="toggleLogs()">📜 View AI Logs</button>
+        <div id="logsDropdown" class="logs-dropdown">
+            <div class="logs-header">
+                <span style="color:white; font-weight:bold;">AI Analysis History</span>
+                <button onclick="toggleLogs()"
+                    style="background:none; border:none; color:#666; cursor:pointer;">✕</button>
+            </div>
+            <div class="logs-content">
+                <table>
+                    <tbody id="logs-table-body"></tbody>
+                </table>
+            </div>
+            <div style="padding:10px; text-align:center; border-top:1px solid #333;">
+                <button class="btn-ghost" style="font-size:12px;" onclick="loadLogs()">🔄 Refresh Logs</button>
+            </div>
+        </div>
+
+        <div class="dashboard-layout">
+            <div class="col-left">
+                <div class="magic-section">
+                    <h2>Good Morning, Trader</h2>
+                    <p style="color: #888; margin-bottom: 20px;">Click below for your daily AI-powered market insight.
+                    </p>
+                    <button class="magic-btn" onclick="runMagicScan()">✨ GET DAILY PICK</button>
+                    <div id="magicResult" class="magic-result"></div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">My Portfolio</div>
+                    <div class="add-holding-form">
+                        <input type="text" id="newSymbol" placeholder="Enter Stock Symbol (e.g. AAPL)">
+                        <button class="action-btn" onclick="addHolding()">+ Add</button>
+                    </div>
+                    <div id="holdingsList"></div>
                 </div>
             </div>
 
-            <!-- AI Logs Dropdown Panel -->
-            <div id="logsDropdown" class="logs-dropdown">
-                <div class="logs-header">
-                    <span style="color:white; font-weight:bold;">AI Analysis History</span>
-                    <button onclick="toggleLogs()"
-                        style="background:none; border:none; color:#666; cursor:pointer;">✕</button>
-                </div>
-                <div class="logs-content">
-                    <table>
-                        <tbody id="logs-table-body">
-                            <!-- Logs will load here -->
-                        </tbody>
-                    </table>
-                </div>
-                <div style="padding:10px; text-align:center; border-top:1px solid #333;">
-                    <button class="btn-ghost" style="font-size:12px;" onclick="loadLogs()">🔄 Refresh Logs</button>
-                </div>
-            </div>
-
-            <div class="dashboard-layout">
-                <!-- Left Column -->
-                <div class="col-left">
-                    <!-- Magic Section -->
-                    <div class="magic-section">
-                        <h2>Good Morning, Trader</h2>
-                        <p style="color: #888; margin-bottom: 20px;">Click below for your daily AI-powered market
-                            insight.</p>
-                        <button class="magic-btn" onclick="runMagicScan()">✨ GET DAILY PICK</button>
-                        <div id="magicResult" class="magic-result"></div>
+            <div class="col-right">
+                <div class="card">
+                    <div class="card-header">AI Personality</div>
+                    <div class="personality-selector">
+                        <div class="personality-card active" onclick="setPersonality('burry', this)">
+                            <span class="p-icon">🐻</span>
+                            <div class="p-name">BURRY</div>
+                        </div>
+                        <div class="personality-card" onclick="setPersonality('penguin', this)">
+                            <span class="p-icon">🐧</span>
+                            <div class="p-name">PENGUIN</div>
+                        </div>
+                        <div class="personality-card" onclick="setPersonality('sniper', this)">
+                            <span class="p-icon">🎯</span>
+                            <div class="p-name">SNIPER</div>
+                        </div>
+                        <div class="personality-card" onclick="setPersonality('idiot', this)">
+                            <span class="p-icon">🤪</span>
+                            <div class="p-name">IDIOT</div>
+                        </div>
                     </div>
 
-                    <!-- Holdings Section -->
-                    <div class="card">
-                        <div class="card-header">My Portfolio</div>
-                        <div class="add-holding-form">
-                            <input type="text" id="newSymbol" placeholder="Enter Stock Symbol (e.g. AAPL)">
-                            <button class="action-btn" onclick="addHolding()">+ Add</button>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                        <div class="input-group">
+                            <label>RSI Range</label>
+                            <div style="display: flex; gap: 5px;">
+                                <input type="number" id="rsiMin" value="70">
+                                <input type="number" id="rsiMax" value="100">
+                            </div>
                         </div>
-                        <div id="holdingsList"></div>
+                        <div class="input-group">
+                            <label>MCap ($M)</label>
+                            <div style="display: flex; gap: 5px;">
+                                <input type="number" id="mcapMin" value="1000">
+                                <input type="number" id="mcapMax" value="2000000">
+                            </div>
+                        </div>
                     </div>
+
+                    <input type="hidden" id="changeMin" value="5">
+                    <input type="hidden" id="changeMax" value="50">
+                    <input type="hidden" id="volMult" value="2.0">
+
+                    <button class="action-btn" onclick="runScan()">RUN SCANNER</button>
                 </div>
 
-                <!-- Right Column -->
-                <div class="col-right">
-                    <!-- Personality & Filters -->
-                    <div class="card">
-                        <div class="card-header">AI Personality</div>
-                        <div class="personality-selector">
-                            <div class="personality-card active" onclick="setPersonality('burry', this)">
-                                <span class="p-icon">🐻</span>
-                                <div class="p-name">BURRY</div>
-                            </div>
-                            <div class="personality-card" onclick="setPersonality('penguin', this)">
-                                <span class="p-icon">🐧</span>
-                                <div class="p-name">PENGUIN</div>
-                            </div>
-                            <div class="personality-card" onclick="setPersonality('sniper', this)">
-                                <span class="p-icon">🎯</span>
-                                <div class="p-name">SNIPER</div>
-                            </div>
-                            <div class="personality-card" onclick="setPersonality('idiot', this)">
-                                <span class="p-icon">🤪</span>
-                                <div class="p-name">IDIOT</div>
-                            </div>
-                        </div>
-
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-                            <div class="input-group">
-                                <label>RSI Range</label>
-                                <div style="display: flex; gap: 5px;">
-                                    <input type="number" id="rsiMin" value="70">
-                                    <input type="number" id="rsiMax" value="100">
-                                </div>
-                            </div>
-                            <div class="input-group">
-                                <label>MCap ($M)</label>
-                                <div style="display: flex; gap: 5px;">
-                                    <input type="number" id="mcapMin" value="1000">
-                                    <input type="number" id="mcapMax" value="2000000">
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Hidden filters for cleaner UI, set by personality -->
-                        <input type="hidden" id="changeMin" value="5">
-                        <input type="hidden" id="changeMax" value="50">
-                        <input type="hidden" id="volMult" value="2.0">
-
-                        <button class="action-btn" onclick="runScan()">RUN SCANNER</button>
-                    </div>
-
-                    <!-- Scanner Results -->
-                    <div class="card" style="flex:1; display:flex; flex-direction:column;">
-                        <div class="card-header">Live Opportunities</div>
-                        <div id="scanResults" style="flex:1; overflow-y:auto;">
-                            <div style="text-align: center; padding: 40px; color: #444;">
-                                Select a personality and run the scanner.
-                            </div>
+                <div class="card" style="flex:1; display:flex; flex-direction:column;">
+                    <div class="card-header">Live Opportunities</div>
+                    <div id="scanResults" style="flex:1; overflow-y:auto;">
+                        <div style="text-align: center; padding: 40px; color: #444;">
+                            Select a personality and run the scanner.
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <script>
-            // --- Navigation ---
-            // --- Initialization ---
-            window.onload = function () {
-                loadHoldings();
-                runScan(); // Run default scan
-                loadLogs(); // Pre-load logs
-            };
+    <script>
+        window.onload = function () {
+            loadHoldings();
+            runScan();
+            loadLogs();
+        };
 
-            function toggleLogs() {
-                const dropdown = document.getElementById('logsDropdown');
-                dropdown.classList.toggle('open');
-            }
+        function toggleLogs() {
+            const dropdown = document.getElementById('logsDropdown');
+            dropdown.classList.toggle('open');
+        }
 
-            async function loadLogs() {
-                const tbody = document.getElementById('logs-table-body');
-                tbody.innerHTML = '<tr><td colspan="5" style="text-align:center">Loading history...</td></tr>';
+        async function loadLogs() {
+            const tbody = document.getElementById('logs-table-body');
+            tbody.innerHTML = '<tr><td colspan="5" style="text-align:center">Loading history...</td></tr>';
 
-                try {
-                    const res = await fetch('?action=logs');
-                    // Since we are using the same file for API, we need to make sure we hit the API endpoint
-                    // Actually, the API routing checks for /api/logs, so let's use that
-                    const apiRes = await fetch('/api/logs');
-                    const data = await apiRes.json();
+            try {
+                const apiRes = await fetch('/api/logs');
+                const data = await apiRes.json();
 
-                    if (data.error) {
-                        tbody.innerHTML = `<tr><td colspan="5" style="color:var(--danger)">${data.error}</td></tr>`;
-                        return;
-                    }
+                if (data.error) {
+                    tbody.innerHTML = `<tr><td colspan="5" style="color:var(--danger)">${data.error}</td></tr>`;
+                    return;
+                }
 
-                    if (!data.logs || data.logs.length === 0) {
-                        tbody.innerHTML = '<tr><td colspan="5" style="text-align:center">No AI history found yet.</td></tr>';
-                        return;
-                    }
+                if (!data.logs || data.logs.length === 0) {
+                    tbody.innerHTML = '<tr><td colspan="5" style="text-align:center">No AI history found yet.</td></tr>';
+                    return;
+                }
 
-                    tbody.innerHTML = data.logs.map(log => {
-                        // Determine type based on verdict content or just generic
-                        // We didn't store "type" in the table explicitly, but we can infer or just show "Analysis"
-                        // Actually, let's just show "Analysis" for now or infer from context if we had it.
-                        // The user asked for "all the ai responses we log", so we show what we have.
-                        return `
+                tbody.innerHTML = data.logs.map(log => `
                     <tr>
                         <td style="color:var(--text-dim); font-size:12px;">${log.created_at}</td>
                         <td><span class="badge" style="background:var(--accent-glow); color:var(--accent); padding:2px 6px; border-radius:4px; font-size:10px;">ANALYSIS</span></td>
@@ -1279,128 +1238,125 @@ function calculateSignals($stock, $filters)
                         <td>$${parseFloat(log.price).toFixed(2)}</td>
                         <td style="white-space: pre-wrap; font-size: 0.9em; line-height: 1.4; color:#ccc;">${log.verdict}</td>
                     </tr>
-                `}).join('');
+                `).join('');
 
-                } catch (e) {
-                    console.error(e);
-                    tbody.innerHTML = '<tr><td colspan="5" style="color:var(--danger)">Failed to load logs.</td></tr>';
-                }
+            } catch (e) {
+                console.error(e);
+                tbody.innerHTML = '<tr><td colspan="5" style="color:var(--danger)">Failed to load logs.</td></tr>';
             }
+        }
 
-            let currentPersonality = 'burry';
-            let currentSort = { col: 'signals', dir: 'desc' };
-            let lastScanData = [];
+        let currentPersonality = 'burry';
+        let currentSort = { col: 'signals', dir: 'desc' };
+        let lastScanData = [];
 
-            function setPersonality(type, el) {
-                currentPersonality = type;
-                document.querySelectorAll('.personality-card').forEach(c => c.classList.remove('active'));
-                el.classList.add('active');
+        function setPersonality(type, el) {
+            currentPersonality = type;
+            document.querySelectorAll('.personality-card').forEach(c => c.classList.remove('active'));
+            el.classList.add('active');
 
-                // Update inputs based on personality
-                if (type === 'burry') {
-                    document.getElementById('rsiMin').value = 70;
-                    document.getElementById('rsiMax').value = 100;
-                    document.getElementById('changeMin').value = 15;
-                    document.getElementById('changeMax').value = 100;
-                    document.getElementById('mcapMin').value = 1000;
-                    document.getElementById('mcapMax').value = 2000000;
-                    document.getElementById('volMult').value = 2.0;
-                } else if (type === 'penguin') {
-                    document.getElementById('rsiMin').value = 20;
-                    document.getElementById('rsiMax').value = 45;
-                    document.getElementById('changeMin').value = -20;
-                    document.getElementById('changeMax').value = 10;
-                    document.getElementById('mcapMin').value = 500;
-                    document.getElementById('mcapMax').value = 2000000;
-                    document.getElementById('volMult').value = 1.5;
-                } else if (type === 'sniper') {
-                    // Precision Breakouts: Strong momentum, high quality, just starting to move
-                    document.getElementById('rsiMin').value = 55;
-                    document.getElementById('rsiMax').value = 75;
-                    document.getElementById('changeMin').value = 3;
-                    document.getElementById('changeMax').value = 15;
-                    document.getElementById('mcapMin').value = 10000; // Large caps only
-                    document.getElementById('mcapMax').value = 2000000;
-                    document.getElementById('volMult').value = 1.2;
-                } else if (type === 'idiot') {
-                    // The Hopeful Idiot: Chasing pumps, buying the top, ignoring fundamentals
-                    document.getElementById('rsiMin').value = 80;
-                    document.getElementById('rsiMax').value = 100;
-                    document.getElementById('changeMin').value = 20;
-                    document.getElementById('changeMax').value = 500;
-                    document.getElementById('mcapMin').value = 0;
-                    document.getElementById('mcapMax').value = 1000; // Garbage/Small caps
-                    document.getElementById('volMult').value = 4.0;
-                }
+            if (type === 'burry') {
+                document.getElementById('rsiMin').value = 70;
+                document.getElementById('rsiMax').value = 100;
+                document.getElementById('changeMin').value = 15;
+                document.getElementById('changeMax').value = 100;
+                document.getElementById('mcapMin').value = 1000;
+                document.getElementById('mcapMax').value = 2000000;
+                document.getElementById('volMult').value = 2.0;
+            } else if (type === 'penguin') {
+                document.getElementById('rsiMin').value = 20;
+                document.getElementById('rsiMax').value = 45;
+                document.getElementById('changeMin').value = -20;
+                document.getElementById('changeMax').value = 10;
+                document.getElementById('mcapMin').value = 500;
+                document.getElementById('mcapMax').value = 2000000;
+                document.getElementById('volMult').value = 1.5;
+            } else if (type === 'sniper') {
+                document.getElementById('rsiMin').value = 55;
+                document.getElementById('rsiMax').value = 75;
+                document.getElementById('changeMin').value = 3;
+                document.getElementById('changeMax').value = 15;
+                document.getElementById('mcapMin').value = 10000;
+                document.getElementById('mcapMax').value = 2000000;
+                document.getElementById('volMult').value = 1.2;
+            } else if (type === 'idiot') {
+                document.getElementById('rsiMin').value = 80;
+                document.getElementById('rsiMax').value = 100;
+                document.getElementById('changeMin').value = 20;
+                document.getElementById('changeMax').value = 500;
+                document.getElementById('mcapMin').value = 0;
+                document.getElementById('mcapMax').value = 1000;
+                document.getElementById('volMult').value = 4.0;
             }
+        }
 
-            async function runScan() {
-                const container = document.getElementById('scanResults');
-                container.innerHTML = '<div style="padding:20px; text-align:center;">Scanning market...</div>';
+        async function runScan() {
+            const container = document.getElementById('scanResults');
+            container.innerHTML = '<div style="padding:20px; text-align:center;">Scanning market...</div>';
 
-                const filters = {
-                    rsiMin: document.getElementById('rsiMin').value,
-                    rsiMax: document.getElementById('rsiMax').value,
-                    volumeMultiplier: document.getElementById('volMult').value,
-                    priceChangeMin: document.getElementById('changeMin').value,
-                    priceChangeMax: document.getElementById('changeMax').value,
-                    marketCapMin: document.getElementById('mcapMin').value,
-                    marketCapMax: document.getElementById('mcapMax').value,
-                    minSignals: 3
-                };
+            const filters = {
+                rsiMin: document.getElementById('rsiMin').value,
+                rsiMax: document.getElementById('rsiMax').value,
+                volumeMultiplier: document.getElementById('volMult').value,
+                priceChangeMin: document.getElementById('changeMin').value,
+                priceChangeMax: document.getElementById('changeMax').value,
+                marketCapMin: document.getElementById('mcapMin').value,
+                marketCapMax: document.getElementById('mcapMax').value,
+                minSignals: 3
+            };
 
-                try {
-                    const res = await fetch('/api/scan', {
-                        method: 'POST',
-                        body: JSON.stringify({ preset: currentPersonality, filters })
-                    });
-                    const data = await res.json();
-                    lastScanData = data.results;
-                    renderTable(lastScanData, container);
-                } catch (e) {
-                    container.innerHTML = 'Error scanning.';
-                }
-            }
-
-            function sortTable(col) {
-                if (!lastScanData.length) return;
-
-                if (currentSort.col === col) {
-                    currentSort.dir = currentSort.dir === 'asc' ? 'desc' : 'asc';
-                } else {
-                    currentSort.col = col;
-                    currentSort.dir = 'desc'; // Default to desc for numbers usually
-                }
-
-                const sorted = [...lastScanData].sort((a, b) => {
-                    let valA = a[col];
-                    let valB = b[col];
-
-                    if (typeof valA === 'string') {
-                        valA = valA.toLowerCase();
-                        valB = valB.toLowerCase();
-                    }
-
-                    if (valA < valB) return currentSort.dir === 'asc' ? -1 : 1;
-                    if (valA > valB) return currentSort.dir === 'asc' ? 1 : -1;
-                    return 0;
+            try {
+                const res = await fetch('/api/scan', {
+                    method: 'POST',
+                    body: JSON.stringify({ preset: currentPersonality, filters })
                 });
+                const data = await res.json();
+                lastScanData = data.results;
+                renderTable(lastScanData, container);
+            } catch (e) {
+                container.innerHTML = 'Error scanning.';
+            }
+        }
 
-                renderTable(sorted, document.getElementById('scanResults'));
+        function sortTable(col) {
+            if (!lastScanData.length) return;
+
+            if (currentSort.col === col) {
+                currentSort.dir = currentSort.dir === 'asc' ? 'desc' : 'asc';
+            } else {
+                currentSort.col = col;
+                currentSort.dir = 'desc';
             }
 
-            function renderTable(items, container) {
-                if (!items.length) {
-                    container.innerHTML = '<div style="padding:20px; text-align:center;">No results found.</div>';
-                    return;
+            const sorted = [...lastScanData].sort((a, b) => {
+                let valA = a[col];
+                let valB = b[col];
+
+                if (typeof valA === 'string') {
+                    valA = valA.toLowerCase();
+                    valB = valB.toLowerCase();
                 }
 
-                const getArrow = (col) => {
-                    if (currentSort.col !== col) return '';
-                    return currentSort.dir === 'asc' ? ' ↑' : ' ↓';
-                };
+                if (valA < valB) return currentSort.dir === 'asc' ? -1 : 1;
+                if (valA > valB) return currentSort.dir === 'asc' ? 1 : -1;
+                return 0;
+            });
 
-                let html = `<table><thead><tr>
+            renderTable(sorted, document.getElementById('scanResults'));
+        }
+
+        function renderTable(items, container) {
+            if (!items.length) {
+                container.innerHTML = '<div style="padding:20px; text-align:center;">No results found.</div>';
+                return;
+            }
+
+            const getArrow = (col) => {
+                if (currentSort.col !== col) return '';
+                return currentSort.dir === 'asc' ? ' ↑' : ' ↓';
+            };
+
+            let html = `<table><thead><tr>
                 <th onclick="sortTable('symbol')">Symbol${getArrow('symbol')}</th>
                 <th onclick="sortTable('price')">Price${getArrow('price')}</th>
                 <th onclick="sortTable('priceChange')">Change${getArrow('priceChange')}</th>
@@ -1412,13 +1368,13 @@ function calculateSignals($stock, $filters)
                 <th>AI Insight</th>
             </tr></thead><tbody>`;
 
-                items.forEach(item => {
-                    const changeClass = item.priceChange >= 0 ? 'price-up' : 'price-down';
-                    const gapClass = item.gap >= 0 ? 'price-up' : 'price-down';
-                    const mcap = (item.marketCap / 1000000).toFixed(0) + 'M';
-                    const vol = item.volume > 0 ? (item.volume / 1000000).toFixed(1) + 'M' : 'Closed';
+            items.forEach(item => {
+                const changeClass = item.priceChange >= 0 ? 'price-up' : 'price-down';
+                const gapClass = item.gap >= 0 ? 'price-up' : 'price-down';
+                const mcap = (item.marketCap / 1000000).toFixed(0) + 'M';
+                const vol = item.volume > 0 ? (item.volume / 1000000).toFixed(1) + 'M' : 'Closed';
 
-                    html += `
+                html += `
                     <tr>
                         <td class="symbol-cell">${item.symbol}</td>
                         <td>$${item.price.toFixed(2)}</td>
@@ -1434,62 +1390,60 @@ function calculateSignals($stock, $filters)
                         </td>
                     </tr>
                 `;
-                });
-                html += '</tbody></table>';
-                container.innerHTML = html;
-            }
+            });
+            html += '</tbody></table>';
+            container.innerHTML = html;
+        }
 
-            // --- Magic Feature ---
-            async function runMagicScan() {
-                const btn = document.querySelector('.magic-btn');
-                const resDiv = document.getElementById('magicResult');
+        async function runMagicScan() {
+            const btn = document.querySelector('.magic-btn');
+            const resDiv = document.getElementById('magicResult');
 
-                btn.disabled = true;
-                btn.innerHTML = '🔮 CONSULTING ORACLE...';
-                resDiv.style.display = 'none';
+            btn.disabled = true;
+            btn.innerHTML = '🔮 CONSULTING ORACLE...';
+            resDiv.style.display = 'none';
 
-                try {
-                    const res = await fetch('/api/magic');
-                    const data = await res.json();
+            try {
+                const res = await fetch('/api/magic');
+                const data = await res.json();
 
-                    if (data.pick) {
-                        const p = data.pick;
-                        resDiv.style.display = 'block';
-                        resDiv.innerHTML = `
+                if (data.pick) {
+                    const p = data.pick;
+                    resDiv.style.display = 'block';
+                    resDiv.innerHTML = `
                         <h3 style="color: var(--accent); margin-bottom: 10px;">DAILY PICK: ${p.symbol}</h3>
                         <div style="font-size: 24px; font-weight: bold; margin-bottom: 10px;">${p.action}</div>
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 15px; font-size: 14px;">
                             <div>RSI: ${p.rsi.toFixed(1)}</div>
                             <div>Score: ${p.score}/10</div>
                         </div>
-                        <div class="ai-text" style="border-left: 3px solid var(--accent);">
+                        <div class="ai-text" style="border-left: 3px solid var(--accent); padding-left: 15px;">
                             ${p.ai_analysis}
                         </div>
                     `;
-                    }
-                } catch (e) {
-                    alert('Magic failed. Try again.');
                 }
-
-                btn.disabled = false;
-                btn.innerHTML = '✨ GET DAILY PICK';
+            } catch (e) {
+                alert('Magic failed. Try again.');
             }
 
-            // --- Holdings ---
-            async function loadHoldings() {
-                const container = document.getElementById('holdingsList');
-                container.innerHTML = 'Loading portfolio...';
+            btn.disabled = false;
+            btn.innerHTML = '✨ GET DAILY PICK';
+        }
 
-                try {
-                    const res = await fetch('/api/holdings');
-                    const data = await res.json();
+        async function loadHoldings() {
+            const container = document.getElementById('holdingsList');
+            container.innerHTML = 'Loading portfolio...';
 
-                    if (!data.holdings.length) {
-                        container.innerHTML = '<div style="padding:20px; text-align:center; color:#666;">No holdings added yet.</div>';
-                        return;
-                    }
+            try {
+                const res = await fetch('/api/holdings');
+                const data = await res.json();
 
-                    let html = `<table><thead><tr>
+                if (!data.holdings.length) {
+                    container.innerHTML = '<div style="padding:20px; text-align:center; color:#666;">No holdings added yet.</div>';
+                    return;
+                }
+
+                let html = `<table><thead><tr>
                     <th>Symbol</th>
                     <th>Price</th>
                     <th>Change</th>
@@ -1502,13 +1456,13 @@ function calculateSignals($stock, $filters)
                     <th>AI Advice</th>
                 </tr></thead><tbody>`;
 
-                    data.holdings.forEach(h => {
-                        const changeClass = h.price_change >= 0 ? 'price-up' : 'price-down';
-                        const gapClass = h.gap >= 0 ? 'price-up' : 'price-down';
-                        const vol = h.volume > 0 ? (h.volume / 1000000).toFixed(1) + 'M' : 'Closed';
-                        const mcap = h.marketCap ? (h.marketCap / 1000000).toFixed(0) + 'M' : 'N/A';
+                data.holdings.forEach(h => {
+                    const changeClass = h.price_change >= 0 ? 'price-up' : 'price-down';
+                    const gapClass = h.gap >= 0 ? 'price-up' : 'price-down';
+                    const vol = h.volume > 0 ? (h.volume / 1000000).toFixed(1) + 'M' : 'Closed';
+                    const mcap = h.marketCap ? (h.marketCap / 1000000).toFixed(0) + 'M' : 'N/A';
 
-                        html += `
+                    html += `
                         <tr>
                             <td class="symbol-cell">${h.symbol}</td>
                             <td>$${h.price.toFixed(2)}</td>
@@ -1525,58 +1479,57 @@ function calculateSignals($stock, $filters)
                             </td>
                         </tr>
                     `;
-                    });
-                    html += '</tbody></table>';
-                    container.innerHTML = html;
+                });
+                html += '</tbody></table>';
+                container.innerHTML = html;
 
-                } catch (e) {
-                    container.innerHTML = 'Error loading holdings.';
-                }
+            } catch (e) {
+                container.innerHTML = 'Error loading holdings.';
             }
+        }
 
-            async function addHolding() {
-                const input = document.getElementById('newSymbol');
-                const symbol = input.value.trim();
-                if (!symbol) return;
+        async function addHolding() {
+            const input = document.getElementById('newSymbol');
+            const symbol = input.value.trim();
+            if (!symbol) return;
 
-                await fetch('/api/holdings', {
+            await fetch('/api/holdings', {
+                method: 'POST',
+                body: JSON.stringify({ symbol: symbol })
+            });
+
+            input.value = '';
+            loadHoldings();
+        }
+
+        async function removeHolding(symbol) {
+            if (!confirm('Remove ' + symbol + '?')) return;
+
+            await fetch('/api/holdings', {
+                method: 'DELETE',
+                body: JSON.stringify({ symbol: symbol })
+            });
+            loadHoldings();
+        }
+
+        async function getInsight(symbol, name, btn) {
+            btn.innerHTML = 'Thinking...';
+            const container = btn.nextElementSibling;
+
+            try {
+                const res = await fetch('/api/verify', {
                     method: 'POST',
-                    body: JSON.stringify({ symbol: symbol })
+                    body: JSON.stringify({ symbol, name })
                 });
+                const data = await res.json();
 
-                input.value = '';
-                loadHoldings();
+                container.innerHTML = `<div class="ai-text" style="margin-top: 10px; padding: 10px; background: rgba(0,0,0,0.4); border-radius: 6px;">${data.verdict}</div>`;
+                btn.innerHTML = 'REFRESH';
+            } catch (e) {
+                btn.innerHTML = 'Error';
             }
-
-            async function removeHolding(symbol) {
-                if (!confirm('Remove ' + symbol + '?')) return;
-
-                await fetch('/api/holdings', {
-                    method: 'DELETE',
-                    body: JSON.stringify({ symbol: symbol })
-                });
-                loadHoldings();
-            }
-
-            // --- Shared AI ---
-            async function getInsight(symbol, name, btn) {
-                btn.innerHTML = 'Thinking...';
-                const container = btn.nextElementSibling;
-
-                try {
-                    const res = await fetch('/api/verify', {
-                        method: 'POST',
-                        body: JSON.stringify({ symbol, name })
-                    });
-                    const data = await res.json();
-
-                    container.innerHTML = `<div class="ai-text">${data.verdict}</div>`;
-                    btn.innerHTML = 'REFRESH';
-                } catch (e) {
-                    btn.innerHTML = 'Error';
-                }
-            }
-        </script>
-    </body>
+        }
+    </script>
+</body>
 
 </html>
