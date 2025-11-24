@@ -1,4 +1,5 @@
 # Penguin-Burry AI Trading Assistant
+<img width="1636" height="1340" alt="Screenshot 2025-11-23 at 7 53 56 PM" src="https://github.com/user-attachments/assets/2ce8e7d0-d2b3-4eb0-8011-6e368ad147f3" />
 
 A comprehensive, AI-powered trading dashboard designed for clarity, automation, and insight.
 
